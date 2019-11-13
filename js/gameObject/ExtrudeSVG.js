@@ -9,9 +9,9 @@ class ExtrudeSVG extends GameObject{
         var _data = this.data;
         this.InitGeometry();
         this.InitMaterial();
-        // this.mesh = new THREE.SceneUtils.createMultiMaterialObject(this.geometry, [this.meshMaterial, this.wireFrameMat]);
+        this.mesh = new THREE.SceneUtils.createMultiMaterialObject(this.geometry, [this.meshMaterial, this.wireFrameMat]);
         // this.mesh = new THREE.Mesh(this.geometry, this.material);
-        this.mesh = new THREE.Mesh(this.geometry, new THREE.MeshBasicMaterial({color: 0x3399ff}));
+        // this.mesh = new THREE.Mesh(this.geometry, new THREE.MeshBasicMaterial({color: 0x3399ff}));
         this.mesh.position.copy(_data.position);
         this.mesh.scale.x = 0.1;
         this.mesh.scale.y = 0.1;

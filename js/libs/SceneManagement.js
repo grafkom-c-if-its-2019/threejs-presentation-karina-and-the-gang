@@ -9,7 +9,7 @@ class SceneManagement{
 
         this.mainCamera = new THREE.PerspectiveCamera(this.camFOV, window.innerWidth/window.innerHeight, this.camNearClip, this.camFarClip);
         this.camPos = new THREE.Vector3();
-        this.camPos.set(0, 0, 10);
+        this.camPos.set(0, 0, 100);
 
         this.spotLight = new THREE.SpotLight(0xffffff);
         this.spotLight.position.set(0, 30, 5);
@@ -46,6 +46,8 @@ class SceneManagement{
             bevelSegments: 0
         };
         // this.hierarchy["Extrude"] = new Extrude({position: new THREE.Vector3(0, 0, 0),
+        //                                     setting: _extrudeSetting});
+        // this.hierarchy["SVG"] = new ExtrudeSVG({position: new THREE.Vector3(0, 0, 0),
         //                                     setting: _extrudeSetting});
 
       // Tube  
