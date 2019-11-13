@@ -31,10 +31,6 @@ class Parametric extends GameObject{
         
     }
 
-    Translate(_position){
-        this.mesh.position.add(_position);
-    }
-
     Rotate(_rotation){
         this.mesh.rotation.y = _rotation;
         this.mesh.rotation.z = _rotation;
