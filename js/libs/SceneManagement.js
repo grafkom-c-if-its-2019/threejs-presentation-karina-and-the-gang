@@ -60,7 +60,7 @@ class SceneManagement{
         //                                         slices: 200, 
         //                                         stacks:250});
 
-      // Text  
+// load manual  
         var fontJson = {
             "glyphs": {
               "0": {
@@ -1357,9 +1357,34 @@ class SceneManagement{
             var obj = this.hierarchy[key];
             this.scene.add(obj.Mesh);
         }
+
+// load file json
+
+        // var loader = new THREE.FontLoader();
+
+        // loader.load( '../../assets/fonts/helvetiker_bold.typeface.json', function ( font ) {
+
+        //   var geometry = new THREE.TextGeometry( 'Hello three.js!', {
+        //     font: font,
+        //     size: 80,
+        //     height: 5,
+        //     curveSegments: 12,
+        //     bevelEnabled: true,
+        //     bevelThickness: 10,
+        //     bevelSize: 8,
+        //     bevelOffset: 0,
+        //     bevelSegments: 5
+        //   } );
+        //   var textMaterial = new THREE.MeshPhongMaterial( { color: 0xff0000 } );
+
+        //   var mesh = new THREE.Mesh( geometry, textMaterial );
+        //   mesh.position.set( x, y, z );
+      
+        //   this.scene.add(mesh);
+        // } );
+
     }
 
-    translateRate = new THREE.Vector3(0.01,0,0);
     rotateRate = 0.01;
 
     Update(){
