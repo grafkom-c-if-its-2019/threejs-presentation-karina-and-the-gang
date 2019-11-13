@@ -26,11 +26,16 @@ class SceneManagement{
     }
 
     InitHierarchy() {
+      // Convex Hull
         // this.hierarchy["ConvexHull"] = new Convex({position: new THREE.Vector3(0, 0, 0)});
+
+      // Lathe  
         // this.hierarchy["Lathe"] = new Lathe({position: new THREE.Vector3(0, 0, 0), 
         //                                 segments: 25, 
         //                                 phiStart: 0, 
         //                                 phiLen: 6.3});
+
+      // Extrude  
         var _extrudeSetting = {
             steps: 1,
             depth: 5,
@@ -42,17 +47,20 @@ class SceneManagement{
         };
         // this.hierarchy["Extrude"] = new Extrude({position: new THREE.Vector3(0, 0, 0),
         //                                     setting: _extrudeSetting});
-        // this.hierarchy["Tube"] = new Tube({position: new THREE.Vector3(0, 0, 5),
-        //                                 segments: 250,
-        //                                 radius: 0.2,
-        //                                 segRad: 200,
-        //                                 closed: false});
-        // this.hierarchy["SVG"] = new ExtrudeSVG({position: new THREE.Vector3(0, 0, 0),
-        //                                 setting: _extrudeSetting});
-        // this.hierarchy["Parametric"] = new Parametric({position: new THREE.Vector3(0, 0, 5), 
-        //                                         slices: 25, 
-        //                                         stacks:25});
 
+      // Tube  
+        // this.hierarchy["Tube"] = new Tube({position: new THREE.Vector3(0, 0, 6),
+        //                                 segments: 200, 
+        //                                 radius: 0.1,
+        //                                 segRad: 200, //makin gede makin bunder
+        //                                 closed: false});
+
+      // Parametric    
+        // this.hierarchy["Parametric"] = new Parametric({position: new THREE.Vector3(0, 0, 5), 
+        //                                         slices: 200, 
+        //                                         stacks:250});
+
+      // Text  
         var fontJson = {
             "glyphs": {
               "0": {

@@ -10,11 +10,9 @@ class Parametric extends GameObject{
         var _data = this.data;
         this.InitGeometry();
         this.InitMaterial();
-        // this.mesh = new THREE.SceneUtils.createMultiMaterialObject(this.geometry, [this.meshMaterial, this.wireFrameMat]);
         this.mesh = new THREE.Mesh(this.geometry, this.material);
-        // this.mesh = new THREE.Mesh(this.geometry, new THREE.MeshBasicMaterial({color: 0x3399ff}));
         this.mesh.position.copy(_data.position);
-        this.mesh.scale.set(0.1, 0.1, 0.1);
+        this.mesh.scale.set(0.2, 0.2, 0.1);
         console.log(this.mesh);
     }
 
@@ -24,18 +22,9 @@ class Parametric extends GameObject{
     }
 
     InitMaterial(){
-        this.meshMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00, transparent: true, opacity: 0.2});
-        this.meshMaterial.side = THREE.DoubleSide;
-
-        this.wireFrameMat = new THREE.MeshBasicMaterial();
-        this.wireFrameMat.wireframe = true;
-
-        this.material = new THREE.MeshPhongMaterial({
-            specular: 0xaaaafff,
-            color: 0x3399ff,
-            shininess: 40
-        });
+        this.material = new THREE.MeshNormalMaterial();
         this.material.side = THREE.DoubleSide;
+        this.material.wireframe = true;
     }
 
     Update(){
